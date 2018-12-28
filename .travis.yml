@@ -6,4 +6,18 @@ before_install:
 
 script:
         - docker run -it naidu72/docker-react npm run test -- --coverage
+
+deploy:
+    provider: elasticbeanstalk
+    region: "ca-central-1"
+    app: "docker_ract_naidu"
+    env: "DockerReactNaidu-env"
+    bucket_name: "elasticbeanstalk-ca-central-1-873473197052"
+    bucket_path: "docker_ract_naidu"
+    on:
+     branch: master
+    access_key_id: $accesskey
+    secret_access_key:
+         secure: $secret
+ 
         
