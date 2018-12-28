@@ -10,10 +10,10 @@ script:
 deploy:
     provider: elasticbeanstalk
     region: "ca-central-1"
-    app: "docker_ract_naidu"
+    app: "docker_react_naidu"
     env: "DockerReactNaidu-env"
     bucket_name: "elasticbeanstalk-ca-central-1-873473197052"
-    bucket_path: "docker_ract_naidu"
+    bucket_path: "docker_react_naidu"
     on:
      branch: master
     access_key_id: $accesskey
